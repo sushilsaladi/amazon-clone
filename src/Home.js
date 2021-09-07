@@ -18,7 +18,7 @@ function Home() {
                 <Product
                 id="1112"
                 title="Planet Earth"
-                price={9.4}
+                price={11119.4}
                 rating={5}
                 image="https://images.unsplash.com/photo-1616368309964-3a686de13b4d"
                 ></Product>
@@ -27,21 +27,21 @@ function Home() {
                 <Product
                 id="1113"
                 title="Breaking Bad"
-                price={9.4}
+                price={11119.4}
                 rating={5}
                 image="https://images.unsplash.com/photo-1616368309964-3a686de13b4d"
                 ></Product>
                 <Product
                 id="1114"
                 title="Band of Brothers"
-                price={9.4}
+                price={11119.4}
                 rating={5}
                 image="https://images.unsplash.com/photo-1616368309964-3a686de13b4d"
                 ></Product>
                 <Product
                 id="1115"
                 title="Chernobyl"
-                price={9.3}
+                price={11111119.3}
                 rating={5}
                 image="https://images.unsplash.com/photo-1616368309964-3a686de13b4d"
                 ></Product>
@@ -50,7 +50,7 @@ function Home() {
                 <Product
                 id="1116"
                 title="The Wire"
-                price={9.3}
+                price={1111119.3}
                 rating={5}
                 image="https://images.unsplash.com/photo-1616368309964-3a686de13b4d"
                 ></Product>
