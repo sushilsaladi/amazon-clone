@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom';/* href refreshes the page; link does no
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 //rcfe
 function Header() {
-    const [{ basket }] = useStateValue();
+    const [{ basket , user }] = useStateValue();
     //console.log(basket)
+    const login = () => {
+        if(user){
+            auth.signOut();
+        }
+    }
     return (
         <nav className="header">
             <Link to="/">
@@ -22,10 +28,10 @@ function Header() {
             </div>
             {/* 3 links */}
             <div className="header__nav">
-                <Link to="/login" className="header__link">
-                    <div className="header__option">
-                        <span className="header__optionlineone">Hello,Sushil</span>
-                        <span className="header__optionlinetwo">Sign In</span>
+                <Link to={!user && "/login"} className="header__link">
+                    <div onClick={login} className="header__option">
+                        <span className="header__optionlineone">Hello, {user?.email}</span>
+                        <span className="header__optionlinetwo">{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
                 <Link className="header__link">
